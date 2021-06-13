@@ -3,7 +3,7 @@ this is a solution documentation for the test given to me
 
 ## 1. create a query
 the task was to make from tables users like this:
-<!-- Tables -->
+
 | id      | UserName   | Parent   |
 | --- | --------- |----------- |
 | 1 | Ali | 2 |
@@ -21,7 +21,14 @@ become like this
 
 my solution using WHERE Statement, where it select a UserName where it's id are the same number with Parent
 
-##2. create a server##
+## 2. create a server
+
+
+### this is the endpoint you can use to test the server
+
+# 3.142.80.22:3000/api
+
+
 the task was to make some endpoints to find one movie's details and to be able search movie based on the criteria given through query params.
 
 this is the query which can be sent:
@@ -40,8 +47,8 @@ M => Mandatory
 | data_type | O | The data type to return. |
 | page | O | Page number to return. |
 
-###please note that in /api/detail either you send imdb_id or movie_title###
-###please note that in /api/search you movie_title###
+### please note that in /api/detail either you send imdb_id or movie_title
+### please note that in /api/search you movie_title
 
 endpoint api/detail?imdb_id=tt0096895 responses: 
 
