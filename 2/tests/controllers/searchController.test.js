@@ -9,23 +9,23 @@ afterAll(() => server.close())
 // beforeAll(() => console.log('before all'));
 
 describe('endpoint /api/search', () => {
-    it('should return 200 get movies lists', async () => {
-        const querySent = 'movie_title=batman'
-        const expected = { Title: 'Batman'}
-        const res = await request(app).get(`${url}?${querySent}`)
+    it('success hit should return 200 get movies lists', async () => {
+        const querySent = 'movie_title=batman';
+        const expectedData = { Title: 'Batman'};
+        const expectedMessage = 'success get movie(s) search';
+        const res = await request(app).get(`${url}?${querySent}`);
 
         expect(res.status).toEqual(200)
-        expect(res.body.message).toBe('success get movie(s) search')
-        expect(res.body.data).toMatchObject(expected)
+        expect(res.body.message).toBe(expectedMessage)
+        expect(res.body.data).toMatchObject(expectedData)
     });
 
-    it('should return 400', async () => {
+    it('movie not found, should return 400', async () => {
         const querySent = 'movie_title=batasdasdman'
-        const expected = { Title: 'Batman'}
+        const expectedMessage = 'fail get movie(s) search';
         const res = await request(app).get(`${url}?${querySent}`)
-
+        
         expect(res.status).toEqual(400)
-        expect(res.body.message).toBe('fail get movie(s) search')
-        // expect(res.body.data).toMatchObject(expected)
+        expect(res.body.message).toBe(expectedMessage)
     });
 })
