@@ -1,0 +1,26 @@
+[
+    {
+        "code": "success get movie(s) search",
+        "message": "success get movie(s) search",
+        "status": true,
+        "status_code": 200
+    },
+    {
+        "code": "success get movie(s) details",
+        "message": "success get movie(s) details",
+        "status": true,
+        "status_code": 200
+    },
+    {
+        "code": "fail get movie(s) search",
+        "message": "fail get movie(s) search",
+        "status": false,
+        "status_code": 400
+    },
+    {
+        "code": "fail get movie(s) details",
+        "message": "fail get movie(s) details",
+        "status": false,
+        "status_code": 400
+    }
+]
